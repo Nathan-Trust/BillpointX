@@ -16,7 +16,7 @@ export function Navbar() {
   ];
 
   return (
-    <header className="border-b border-gray-100 fixed top-0 z-10 left-0 w-full bg-white">
+    <header className="border-b border-gray-100 fixed top-0 z-50 left-0 w-full bg-white">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center">
           <NavLogo className="h-8 w-auto" />

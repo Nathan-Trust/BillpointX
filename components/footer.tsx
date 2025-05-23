@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Logo } from "@/components/logo"
+import AppStoreButton from "./app-store-button";
 
 export function Footer() {
   return (
@@ -10,9 +11,10 @@ export function Footer() {
           <div>
             <Logo className="h-8 w-auto mb-6" isWhite />
             <p className="text-gray-300 mb-4">
-              BillPointX is a fast, secure, and convenient bill payment app designed to simplify how you manage your
-              everyday bills. From electricity to airtime, we help you stay in control of your finances—anytime,
-              anywhere.
+              BillPointX is a fast, secure, and convenient bill payment app
+              designed to simplify how you manage your everyday bills. From
+              electricity to airtime, we help you stay in control of your
+              finances—anytime, anywhere.
             </p>
           </div>
 
@@ -30,12 +32,18 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/privacy" className="text-gray-300 hover:text-white">
+                <Link
+                  href="/privacy"
+                  className="text-gray-300 hover:text-white"
+                >
                   Privacy & Policy
                 </Link>
               </li>
               <li>
-                <Link href="/support" className="text-gray-300 hover:text-white">
+                <Link
+                  href="/support"
+                  className="text-gray-300 hover:text-white"
+                >
                   Support
                 </Link>
               </li>
@@ -51,12 +59,18 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/privacy" className="text-gray-300 hover:text-white">
+                <Link
+                  href="/privacy"
+                  className="text-gray-300 hover:text-white"
+                >
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/support" className="text-gray-300 hover:text-white">
+                <Link
+                  href="/support"
+                  className="text-gray-300 hover:text-white"
+                >
                   Support
                 </Link>
               </li>
@@ -70,24 +84,23 @@ export function Footer() {
 
             <h3 className="text-lg font-semibold mb-4">Get App</h3>
             <div className="flex flex-col space-y-3">
-              <Link href="#" className="inline-block">
-                <Image
-                  src="/placeholder.svg?height=40&width=135"
-                  alt="Download on the App Store"
-                  width={135}
-                  height={40}
-                  className="h-10 w-auto"
-                />
-              </Link>
-              <Link href="#" className="inline-block">
-                <Image
-                  src="/placeholder.svg?height=40&width=135"
-                  alt="Get it on Google Play"
-                  width={135}
-                  height={40}
-                  className="h-10 w-auto"
-                />
-              </Link>
+              <AppStoreButton
+                iconSrc="/apple-icon.png"
+                topText="Download on the"
+                bottomText="App Store"
+                href="https://your-app-store-link"
+                variant="apple"
+                className="max-w-[200px] border "
+              />
+
+              <AppStoreButton
+                iconSrc="/google-icon.png"
+                topText="GET IT ON"
+                bottomText="Google Play"
+                href="https://your-play-store-link"
+                variant="google"
+                className="max-w-[200px]  border"
+              />
             </div>
           </div>
         </div>
@@ -97,5 +110,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
